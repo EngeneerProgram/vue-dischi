@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="logo d-flex align-items-center p-4">
-            <img src="@/assets/img/spotify1_logo.png" width="70" alt="">
+            <img src="@/assets/img/spotify1_logo.png" width="50" alt="">
         </div>
     </header>
 </template>
