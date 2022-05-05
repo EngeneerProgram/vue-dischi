@@ -2,16 +2,18 @@
     <section class="disk">
 
 
-        <div class="container">
+        <div class="container pt-5">
 
-            <div class="row">
-                <Disk>
-                    :disk="disk"
+            <div class="row row-cols-lg-5">
+                
+                <DiskComponent
                     v-for="disk in disks"
+                    :disk="disk"
                     :key="disk.id"
+                >
 
-
-                </Disk>
+                </DiskComponent>
+               
             </div>
         </div>
 
@@ -33,7 +35,7 @@ export default {
         return { 
 
         API_URI : "https://flynn.boolean.careers/exercises/api/array/music",
-        disks: null,
+        disks: [],
         error: null,
 
         };
@@ -44,7 +46,8 @@ export default {
             axios
             .get(this.API_URI)
             .then((response)=>{
-                this.disk = response.data;
+                console.log(response.data.response);
+                this.disks = response.data.response;
                 
             })
             .catch((error)=>{
@@ -60,3 +63,12 @@ export default {
     },
 };
 </script>
+
+
+<style lang="scss">
+.disk{
+    background-color: rgba(30, 45, 59, 1);
+
+    
+}
+</style>

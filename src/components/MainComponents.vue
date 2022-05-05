@@ -1,16 +1,22 @@
 <template>
     <main>
-
+        <AlbumList>
+            
+        </AlbumList>
     </main>
 </template>
 
 
 <script>
-import DiskComponent from '@/components/DiskComponent.vue';
+import AlbumList from '@/components/AlbumList.vue';
+
 export default {
     name: "MainComponent",
     methods : {
-        DiskComponent
+
+    },
+    components: {
+        AlbumList
     }
     
 }
