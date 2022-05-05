@@ -30,10 +30,14 @@ export default {
     },
 
     data() {
+        return { 
+
         API_URI : "https://flynn.boolean.careers/exercises/api/array/music",
         disks: null,
         error: null,
-    };
+
+        };
+    },
 
     methods : {
         callApi() {
