@@ -2,10 +2,11 @@
   <div class="container">
     <div class="card d-flex align-items-center">
       <div class="col-7">
-        <img :src="disk.poster" alt="" />
-        
-        <h2 class="white">{{ disk.title }}</h2>
-        <div class="center">
+        <img class="mt-4" :src="disk.poster" alt="" />
+        <div class="title_container">
+            <h2 class="white text-center">{{ disk.title }}</h2>
+        </div>
+        <div class="center text-center">
           <h4>{{ disk.author }}</h4>
           <h4>{{ disk.year }}</h4>
         </div>
@@ -43,7 +44,12 @@ img {
   min-height: 100%;
   .white{
       color:white;
-      font-size: 40px;
+      
+  }
+
+  .title_container{
+      width: 130px;
+      
   }
 }
 </style>
