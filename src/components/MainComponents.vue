@@ -6,7 +6,7 @@
     </main>
 </template>
 
-
+// passiamo il componente albumlist
 <script>
 import AlbumList from '@/components/AlbumList.vue';
 
