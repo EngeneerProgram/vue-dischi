@@ -3,17 +3,14 @@
     <div class="logo d-flex align-items-center p-4">
       <img src="@/assets/img/spotify1_logo.png" width="50" alt="" />
     </div>
-
-     <form class="d-flex">
-        <input class="form-control me-2" type="search" v-model="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    <select v-model='tipo_genere' @selectGender='selectGender'/>
       
   </header>
 </template>
 
 
 <script>
+import select from '@/components/SelectGender.vue'
 import "@/assets/scss/style.scss";
 export default {
   name: "HeaderComponents",
@@ -24,6 +21,9 @@ export default {
       }
 
   },
+  components: {
+      select
+  }
   
   
  
